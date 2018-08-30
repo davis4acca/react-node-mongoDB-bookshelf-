@@ -7,9 +7,7 @@ class BookView extends Component {
 		this.props.dispatch(getBookWithReviewer(this.props.match.params.id));
 	}
 
-	componentWillUnmount() {
-		this.props.dispatch();
-	}
+	componentWillUnmount() {}
 
 	renderBook = (books) =>
 		books.book ? (
@@ -31,7 +29,7 @@ class BookView extends Component {
 							<span>Pages:</span> {books.book.pages}
 						</div>
 						<div>
-							<span>Price:</span> {books.book.price}
+							<span>Price:</span> ${books.book.price}
 						</div>
 					</div>
 

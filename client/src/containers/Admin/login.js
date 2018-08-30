@@ -30,6 +30,7 @@ class Login extends Component {
 	};
 
 	render() {
+		let user = this.props.user;
 		return (
 			<div className="rl_container">
 				<form onSubmit={this.submitForm}>
@@ -52,8 +53,8 @@ class Login extends Component {
 							value={this.state.password}
 						/>
 					</div>
-
 					<button type="submit"> Log in </button>
+					<div className="error">{user.login ? <div>{user.login.message}</div> : null}</div>
 				</form>
 			</div>
 		);

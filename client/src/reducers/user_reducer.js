@@ -3,6 +3,8 @@ export default function(state = {}, action) {
 		case 'USER_LOGIN':
 			return { ...state, login: action.payload };
 		default:
+		case 'USER_AUTH':
+			return { ...state, login: action.payload };
 			return state;
 	}
 }
